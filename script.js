@@ -1,9 +1,7 @@
-const apikey = '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';
+import SECRET_KEY from "./apikey.js";
 const btn = document.querySelector("#button");
 const outputbox = document.querySelector("#result")
 const inputbox = document.querySelector("#input")
-
-
 
 async function getmessage(){   
         let loading = document.querySelector(".load");
@@ -12,7 +10,7 @@ async function getmessage(){
         const options = {
         method: 'POST',
         headers: {
-            'Authorization': `Bearer ${apikey}`,
+            'Authorization': `Bearer ${SECRET_KEY}`,
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
